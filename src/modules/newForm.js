@@ -31,30 +31,30 @@ const newForm = () => {
         let body = {};
         const cam = () => {
             if (switchOne.checked) {
-                body['cam1'] = 'Однокамерный';
-                body['diametr1'] = 'Диаметр: ' + diam1;
-                body['quantity1'] = 'Количество: ' + quan1;
+                body['cam'] = true;
+                body['diametr1'] = diam1;
+                body['quantity1'] = quan1;
 
                 if (switchTwo.checked) {
-                    body['well1'] = 'С днищем';
+                    body['well'] = true;
                 } else {
-                    body['well2'] = 'Без днища';
+                    body['well'] = false;
                 }
-                body['distances'] = 'Расстояние: ' + distance.value + 'м';
-                body['result'] = 'Итого: ' + calcResult.value;
+                body['distances'] = distance.value;
+                body['result'] = calcResult.value;
             } else {
-                body['cam2'] = 'Двукамерный';
-                body['diametr1'] = 'Диаметр первого колодца: ' + diam1;
-                body['quantity1'] = 'Количество: ' + quan1;
-                body['diametr2'] = 'Диаметр второго колодца: ' + diam2;
-                body['quantity2'] = 'Количество: ' + quan2;
+                body['cam'] = false;
+                body['diametr1'] = diam1;
+                body['quantity1'] = quan1;
+                body['diametr2'] = diam2;
+                body['quantity2'] = quan2;
                 if (switchTwo.checked) {
-                    body['well1'] = 'С днищем';
+                    body['well'] = true;
                 } else {
-                    body['well2'] = 'Без днища';
+                    body['well'] = false;
                 }
-                body['distances'] = 'Расстояние: ' + distance.value + 'м';
-                body['result'] = 'Итого: ' + calcResult.value;
+                body['distances'] = distance.value;
+                body['result'] = calcResult.value;
 
             }
             formData.forEach((val, key) => {

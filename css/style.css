@@ -66,6 +66,9 @@ a:hover {
 a:visited {
     text-decoration: none
 }
+.call-btn {
+    cursor: pointer;
+}
 
 button:focus,
 input:focus,
